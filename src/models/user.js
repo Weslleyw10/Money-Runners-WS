@@ -23,6 +23,9 @@ const User = new Schema({
     birthday: {
         type: String,
     },
+    phone: {
+        type: String,
+    },
     externalId: {
         type: String,
     },
@@ -35,7 +38,6 @@ const User = new Schema({
         type: Date,
         default: Date.now
     },
-
     updatedAt: {
         type: Date,
         default: null

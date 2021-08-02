@@ -11,6 +11,11 @@ const userChallenge = new Schema({
         type: mongoose.Types.ObjectId,
         ref: 'Challenge',
         required: true
+    },
+    status: {
+        type: String,
+        enum: ['active', 'inactive', 'pendent'],
+        default: 'active'
     },    
     createdAt: {
         type: Date,

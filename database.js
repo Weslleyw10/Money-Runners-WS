@@ -1,14 +1,13 @@
 const mongoose = require('mongoose')
 const environment = process.env.ENVIRONMENT
 
-const URI = ''
+let URI = ''
 
 if(environment == 'dev') {
     URI = process.env.MONGO_URL_DEV
 } else {
     URI = process.env.MONGO_URL_PROD    
 }
-
 
 mongoose.set('useNewUrlParser', true)
 mongoose.set('useFindAndModify', false)
@@ -18,5 +17,5 @@ mongoose.set('debug', true)
 
 mongoose
     .connect(URI)
-    .then(() => console.log('DB is up.'))
+    .then(() => console.log(`DB is up. Environment ${environment}.`))
     .catch((err) => console.log(err))
