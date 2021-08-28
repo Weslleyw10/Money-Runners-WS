@@ -1,8 +1,7 @@
 # Money-Runners-WS
 
-## This project was created with:
-- Nodejs
-- Mongodb
+## This project is backend of app Money Runnes
+
 
 ## Available Scripts
 
@@ -13,6 +12,10 @@ Open http://localhost:8000 to view it in the browser.
 
 
 ## Learn More
+
+### Technologies
+- Nodejs
+- Mongodb
 
 ### Routes
 
