@@ -25,6 +25,6 @@ app.use(cors())
 app.use('/user', require('./src/routes/user.routes'))
 app.use('/challenge', require('./src/routes/challenge.routes'))
 
-app.listen(8000 , () => {
+app.listen(process.env.PORT || 8000 , () => {
     console.log(`Server is up in environment ${environment}.`)
 })
