@@ -18,4 +18,4 @@ mongoose.set('debug', true)
 mongoose
     .connect(URI)
     .then(() => console.log(`DB is up. Environment ${environment}.`))
-    .catch((err) => console.log(err))
+    .catch((err) => console.log(`Error connect DB ${err}`))
