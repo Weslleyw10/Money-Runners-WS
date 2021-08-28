@@ -202,7 +202,7 @@ router.get('/:userId/challenge', async (req, res) => {
             currentPeriod,
             dailyAmount,
             participatedTimes: participatedTimes?.length,
-            isParticipating: Boolean(userChallenge),
+            isParticipating: Boolean(userChallengeRelationship),
             balance,
             challengeFinishedToday: Boolean(challengeFinishedToday),
             discipline,

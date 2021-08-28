@@ -67,7 +67,6 @@ router.post('/join', async (req, res) => {
                     tangible: false
                 }
             ]
-
         })
 
         if(transaction.error) {
@@ -88,7 +87,6 @@ router.post('/join', async (req, res) => {
             userId,
             challengeId
         }).save()
-
 
         res.json({ error: false })
 
@@ -157,10 +155,10 @@ router.get('/:challengeId/ranking', async (req, res) => {
 
         res.json({ 
             error: false,
-            challengeData: challenge.data,
+            challengeDate: challenge.date,
             currentPeriod,
             challengePeriod,
-            trackingByUser,
+            records: trackingByUser,
             extraBalance
         })
 
